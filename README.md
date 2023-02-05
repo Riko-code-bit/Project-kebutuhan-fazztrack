@@ -1,2 +1,1 @@
-# javascript-fazztrack
-
+# Repo Kebutuhan tugas Faztrack
