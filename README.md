@@ -1,4 +1,13 @@
 ============= CATATAN PENTING =================
+
+
+
+
+
+
+
+
+
 1.Scope (Javascript)
 di Javascript itu tidak menggunakan block scope dimana klo di prgram c variable dalam fungsi yang berbeda tidak dapat dipakai oleh fungsi lainnya,sedangkan di javascript bisa dan dinamakan dengan function scope.
 2.Global Scope / window scope
