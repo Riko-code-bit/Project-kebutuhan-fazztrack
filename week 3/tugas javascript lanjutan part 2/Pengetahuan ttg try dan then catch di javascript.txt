@@ -1,0 +1,26 @@
+1.Definisi method try catch di javascript
+- try adalah method di dalam javascript utk menangani error dalam kode.
+- try digunakan utk menandai blok kode yang mempunyai peluang besar mengalami kesalahan/error.
+- Sementara itu, catch digunakan untuk menangani kesalahan yang terjadi pada blok try. Dalam blok catch  kita dapat menentukan tindakan apa yang perlu dilakukan jika terdapat kesalahan.
+- Kita juga dapat menambahkan parameter error pada blok catch, yang akan menyimpan informasi tentang kesalahan yang terjadi.
+
+2.Definisi then catch di javascript
+-  then dan catch adalah method pada Promise dalam JavaScript. Promise sendiri adalah objek yang merepresentasikan sebuah nilai/value yang mungkin tersedia saat ini, 
+atau akan tersedia di masa depan, atau tidak tersedia sama sekali atau bisa dikatakan value yg belum pasti.
+- then digunain untuk menangani hasil sukses dari Promise. Method ini menerima sebuah function callback yang akan dijalankan ketika Promise berhasil/resolved, dan mengembalikan sebuah Promise baru.
+ Function callback ini akan menerima satu parameter, yaitu nilai yang dihasilkan oleh Promise sebelumnya.
+
+3. What different about try and then catch in javascript?
+- try dan catch adalah fitur dalam JavaScript yang digunakan untuk menangani kesalahan (errors) dalam kode.
+- try digunakan untuk mengelompokkan beberapa statement yang dapat menyebabkan kesalahan, dan menangkap (catch) kesalahan tersebut dengan blok catch
+
+- cara kerjanya yaitu dalam struktur try-catch, blok try dijalankan terlebih dahulu, 
+dan jika terdapat kesalahan dalam blok try akan lngsung berhenti dan kendali akan langsung pindah ke blok catch.
+
+-Nah,Sedangkan then dan catch digunakan pada Promise di JavaScript. 
+then digunakan untuk menangani hasil sukses atau resolusi dari Promise, sedangkan catch digunakan untuk menangani kesalahan atau rejection dari Promisenya
+
+Sekian & Terima kasih.
+
+oleh Riko Hadi Pratama
+QA Automation batch 3

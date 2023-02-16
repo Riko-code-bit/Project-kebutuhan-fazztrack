@@ -24,3 +24,4 @@ cekHariKerja('minggu')
 .catch((error) => {
     console.log(error.message);
 });
+
