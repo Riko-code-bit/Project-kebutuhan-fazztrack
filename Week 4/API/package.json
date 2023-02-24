@@ -1,0 +1,17 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "belajar_api",
+  "main": "index.js",
+  "scripts": {
+    "test-api": "npx mocha ./api_testing.js",
+    "cek-mocha-version" : "npx mocha --version"
+  },
+  "author": "kokocrunch",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3n"
+  }
+}
