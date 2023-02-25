@@ -7,6 +7,20 @@ function getUser() {
     .set('Authorization', 1234);
 }
 
+function createUser(data) {
+    return serverAPI
+    .post('users')
+    .set('Authorization','1234')
+    .send(data);
+}
+
+function getSingUser(userId) {
+    return serverAPI
+    .get(`users/${userId}.`)
+    .set('Authorization', 1234);
+}
 module.exports = {
-    getUser
+    getUser,
+    createUser,
+    getSingUser
 };
