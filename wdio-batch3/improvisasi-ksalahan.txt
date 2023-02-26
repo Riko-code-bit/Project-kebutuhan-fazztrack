@@ -1,0 +1,7 @@
+1.file yg diterminal terminal harus diarahin ke file yg mau dieksekusi
+2.salah bagian dri input username dan pwd nya (kurang ' jadinya cuma satu inputan)
+3.file specs harusnya ada di folder yg sama dengan test agar link di wdi.config filenya sama
+4.bagian module export diganti dengan export default agar bisa dijalankan oleh versi wdio yg sekarang
+5.bagian fungsi get di FrontPage yg di comment
+6.file import di login-test nya di kasih format js(maybe) 'import Page from './page.js'
+7.salah bagian fungsi get InputUsername harusnya inputUsername jadinya gk mau ngisi username dan pwwd nya

@@ -48,12 +48,29 @@ describe('ini adalah test suite dari https://reqres.in/api/users',   async () =>
             // assertion
             expect(response.body.name).to.equal('riko'); // sama aja dengan input 
             expect(response.body.job).to.equal(data.job); // tapi dibedain ama variable
-    
-        //     // coba cek ah ketika fungsi get,.. apakah datanya ada ga ada 
-            response = await apiUnderTest.getSingleUser('7');
-            
-            expect(response.body.data.first_name).to.equal('Michael');
-        });
+            console.log(response.body); 
+
+           
+            });
+
+            it('test id utk mencari nama', async () => {
+                response = await apiUnderTest.getSingUser('8');
+                expect(response.body.data.first_name).to.equal('Lindsay');
+                console.log(response.body.data);
+            });
+
+            it('Test apakah endpoint create user berfungsi membuat data user ketika inputnya name itu kosong', async () => {
+                const data = {
+                    "name": "",
+                    "job": "leader"
+                };
+                const response = await apiUnderTest.createUser(data);
+                // console.log(response.status);
+                // console.log(response.body);
+        
+                // assertion
+                expect(response.body.name).to.equal(data.name);
+            });
    
 
     });
