@@ -1,0 +1,59 @@
+============================ STRUKTUR FILE TESTING =========================
+
+-FILE api
+    *file-apinya(regres,swagger,tokopedia,dll)
+        -mencakup function
+        -method get post send (http request)
+        -export function agar bisa dijalankan di file testing
+
+-FILE testing
+    *file konfigurasi test yang akan disambungkan dan dijalankan di json
+        -mencakup apiunder test yang ditautkan dengan file api
+        -require chai
+        -describe and it
+        -async await
+
+-File json
+    *file yang berisi data json yang akan disambungkan dengan file testing dengan cara require 
+    tanpa adanya module export
+
+
+================================== About Mocha ===========================
+-Mocha memiliki waktu default time out yaitu 2 detik,kita bisa merubahnya 
+di file package json dengan menambahakan --timeout=2000
+
+
+
+
+================================== Manage test cases =================================
+- Dengan menambahkan -- di bagian perintah cli,misal npm run test-api --ID-01
+
+
+
+
+============================ HOOKS =================================
+-Ketika kita mau bikin testcase harus ada precondition
+
+-Kriteria Hooks:
+
+    *Hooks Global (hooks yg di eksekusi sebelum semua test dijalankan)
+    *Hooks Local (hooks yg di eksekusi sebelum test tertentu dikerjakan)
+
+    1.BeforeAll
+    2.BeforeEach
+    3.AfterEach
+    4.AfterAll
+
+================================== Mochawesome =================================
+
+-tools yang dapat merubah cli testing menjadi report file berbentuk html
+
+-Ditambahin di bagiann package.json --report Mochawesome
+
+================================== Parallel =================================
+
+command di cli mocha yang dapat menjalankan semua test sekaligus
+
+
+
+

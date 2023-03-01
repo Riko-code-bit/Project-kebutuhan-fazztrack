@@ -1,0 +1,13 @@
+{ "id": "95647be6-08f3-4107-80a6-203a6e6be925",
+            "firstName": "Riko",
+            "lastName": "hadi",
+            "age": 90,
+            "occupation": "Testing",
+            "nationality": "wni",
+            "hobbies": [
+              "Playing Valorant with sage"
+            ],
+            "gender": "MALE",
+            "createdDate": "2023-02-27T05:37:09.680Z",
+            "updatedDate": "2023-02-27T05:37:09.680Z"
+}
