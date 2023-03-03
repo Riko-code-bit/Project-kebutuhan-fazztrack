@@ -15,7 +15,7 @@
     "additionalProperties": false,
     "properties": {
         "id": {
-            "type": 'integer'
+            "type": "string"
         },
         "firstName": {
             "type": "string"
