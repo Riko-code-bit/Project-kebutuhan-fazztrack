@@ -35,6 +35,10 @@ get buttonChart() {
     return $(`#cartur`)
 }
 
+get showProduct() {
+    return $(`.col-lg-8 > h2`)
+}
+
 get home() {
     return $(`.nav-link[href='index.html']`)
 }
@@ -72,8 +76,11 @@ async halamanBarang() {
 
 async halamanUdhDichart() {
     // await this.buttonChart.waitForDisplayed(2000)
-    await this.buttonChart.isDisplayed()
-    await this.home.click()
+    // await this.buttonChart.isDisplayed()
+    // await this.buttonChart.click()
+    await this.showProduct.waitForDisplayed(2000)
+    await this.showProduct.isDisplayed()
+    // 
 }
 
 
