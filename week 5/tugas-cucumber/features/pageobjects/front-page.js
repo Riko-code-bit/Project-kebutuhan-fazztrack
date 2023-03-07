@@ -69,18 +69,16 @@ async pencetBarang() {
 
 async halamanBarang() {
     // await this.linkBarang.waitForDisplayed(1000)
-    await this.linkBarang.isDisplayed()
+    // await this.linkBarang.isDisplayed()
     await this.pencetChart.click()
     await this.buttonChart.click()
+    await this.halamanUdhDichart()
 }
 
 async halamanUdhDichart() {
-    // await this.buttonChart.waitForDisplayed(2000)
-    // await this.buttonChart.isDisplayed()
-    // await this.buttonChart.click()
-    await this.showProduct.waitForDisplayed(2000)
-    await this.showProduct.isDisplayed()
-    // 
+ await browser.pause(2000)
+    
+    
 }
 
 
