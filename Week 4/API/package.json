@@ -4,7 +4,7 @@
   "description": "belajar_api",
   "main": "index.js",
   "scripts": {
-    "test-api": "npx mocha ./test-api/tugas-api.js",
+    "test-api": "npx mocha ./test-api/tugas-api.js --hooks='./hooks/hooks.js --reporter mochawesome",
     "cek-mocha-version": "npx mocha --version"
   },
   "author": "kokocrunch",
