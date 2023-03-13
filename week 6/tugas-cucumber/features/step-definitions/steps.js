@@ -6,6 +6,7 @@ import InteractionPage from '../pageobject/Interaction-page.js'
 
 Given(/^I am from on the front page$/, async() => {
     await FrontPage.open()
+    await browser.pause(2000)
 })
 
 When(/^I am click element im redirecting to element page$/, async() => {
@@ -18,6 +19,7 @@ Then(/^I am clicking every button in element page$/, async() => {
     await ElementPage.klikTwo()
     await ElementPage.klikThree()
     await browser.execute('window.scrollBy(0, 1000)') // scroll to bottom
+    await browser.pause(2000)
     await ElementPage.klikInteractions()
     await browser.pause(2000)
 })

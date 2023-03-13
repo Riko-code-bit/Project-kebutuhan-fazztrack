@@ -27,7 +27,7 @@ class InteractionPage extends Page {
     async validateCss() {
 
         const selector = $(`.ui-state-highlight`)
-        const backGround = await selector.getCSSProperty('background-color')
+        const backGround = await selector.getCSSProperty('background-color') 
         console.log(backGround)
       
 

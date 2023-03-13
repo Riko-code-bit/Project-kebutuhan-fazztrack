@@ -47,9 +47,9 @@ const response = await apiUnderTest.deleteData()
 
    expect(response.status).to.eql(200); // assertion code
    console.log(response.status);
-  //  expect(response.body.id).to.equal(data1.id); // assertion id
-  expect(response.body).to.have.property(`id`, `${idUser}`); // assertion id
+   expect(response.body).to.have.property(`id`, `${idUser}`); // assertion id
 
+   // assertion json schema
    for(let index = 0; index < response.body.length; index++){
     expect(response.body[index]).to.be.jsonSchema(schemaResponse.getIdSchema1)
   }

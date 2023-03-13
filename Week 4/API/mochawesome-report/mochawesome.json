@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-03-12T13:47:45.864Z",
-    "end": "2023-03-12T13:47:45.915Z",
-    "duration": 51,
+    "start": "2023-03-13T17:19:04.421Z",
+    "end": "2023-03-13T17:19:04.469Z",
+    "duration": 48,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "74888f85-9e34-4a54-9e82-0524db26f81c",
+      "uuid": "b3a76bea-1cd6-48b9-b017-8387595af60d",
       "title": "",
       "fullFile": "C:\\Users\\rikoh\\Documents\\Fazztrack\\Repo-kebutuhan-fazztrack\\Week 4\\API\\test-api\\tugas-api.js",
       "file": "\\test-api\\tugas-api.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "754797c0-ab15-4386-a472-4bd52e9c2303",
+          "uuid": "d15f5484-fd72-417e-a2d9-3755344b0c84",
           "title": "API automation test untuk endpoint GET /v1/users/{id}",
           "fullFile": "C:\\Users\\rikoh\\Documents\\Fazztrack\\Repo-kebutuhan-fazztrack\\Week 4\\API\\test-api\\tugas-api.js",
           "file": "\\test-api\\tugas-api.js",
@@ -36,7 +36,7 @@
               "title": "\"before all\" hook: Hit Endpoint create user in \"API automation test untuk endpoint GET /v1/users/{id}\"",
               "fullTitle": "API automation test untuk endpoint GET /v1/users/{id} \"before all\" hook: Hit Endpoint create user in \"API automation test untuk endpoint GET /v1/users/{id}\"",
               "timedOut": false,
-              "duration": 28,
+              "duration": 30,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,38 +45,19 @@
               "context": null,
               "code": "// data tampungan dari data file lokal\nlet data = dataCreateUser1.dataCreateUser();\n//To do create user\nconst response = await apiUnderTest.createUser(data);\n  console.log(response.body);\n  idUser = response.body.id;",
               "err": {},
-              "uuid": "acec30ec-6389-4adb-8777-254e1fa46793",
-              "parentUUID": "754797c0-ab15-4386-a472-4bd52e9c2303",
+              "uuid": "96bea925-9aee-4cec-991b-ddc7a754414b",
+              "parentUUID": "d15f5484-fd72-417e-a2d9-3755344b0c84",
               "isHook": true,
               "skipped": false
             }
           ],
-          "afterHooks": [
-            {
-              "title": "\"after all\" hook: Remove semua data in \"API automation test untuk endpoint GET /v1/users/{id}\"",
-              "fullTitle": "API automation test untuk endpoint GET /v1/users/{id} \"after all\" hook: Remove semua data in \"API automation test untuk endpoint GET /v1/users/{id}\"",
-              "timedOut": false,
-              "duration": 3,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// hooks remove smua data \nconst response = await apiUnderTest.deleteData()",
-              "err": {},
-              "uuid": "ac3178f4-55a4-431a-8a9d-41e7f2e4d29d",
-              "parentUUID": "754797c0-ab15-4386-a472-4bd52e9c2303",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
+          "afterHooks": [],
           "tests": [
             {
               "title": "ID-01 - User menggunakan data user id yang valid.",
               "fullTitle": "API automation test untuk endpoint GET /v1/users/{id} ID-01 - User menggunakan data user id yang valid.",
               "timedOut": false,
-              "duration": 6,
+              "duration": 8,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -85,8 +66,8 @@
               "context": null,
               "code": "// let response = await apiUnderTest.createUser(data)\n // dimake sure apakah id yg dibuat id before ada\n response = await apiUnderTest.getUserDetail(idUser); \n     // tampungan data response body\n let data1 = response.body\n console.log(data1)\n  expect(response.status).to.eql(200); // assertion code\n  console.log(response.status);\n //  expect(response.body.id).to.equal(data1.id); // assertion id\n expect(response.body).to.have.property(`id`, `${idUser}`); // assertion id\n  for(let index = 0; index < response.body.length; index++){\n   expect(response.body[index]).to.be.jsonSchema(schemaResponse.getIdSchema1)\n }",
               "err": {},
-              "uuid": "914d3f87-da6a-4746-a6a5-63b2850f3095",
-              "parentUUID": "754797c0-ab15-4386-a472-4bd52e9c2303",
+              "uuid": "a402212a-a2d1-4e4e-aa7f-93470bcf7e08",
+              "parentUUID": "d15f5484-fd72-417e-a2d9-3755344b0c84",
               "isHook": false,
               "skipped": false
             },
@@ -94,7 +75,7 @@
               "title": "ID-02 -  User gagal mendapatkan data ketika data id yang diinputkan invalid.",
               "fullTitle": "API automation test untuk endpoint GET /v1/users/{id} ID-02 -  User gagal mendapatkan data ketika data id yang diinputkan invalid.",
               "timedOut": false,
-              "duration": 5,
+              "duration": 4,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -103,21 +84,21 @@
               "context": null,
               "code": "// let data = jsonData;\n    // let response = await apiUnderTest.createUser(data);\n    response = await apiUnderTest.getUserDetail('098907079898'); //user memasukkan id yg slaah\n    console.log(response.status)\n    expect(response.status).to.eql(404);\n    expect(response.body).to.have.property('errorCode', 'ER-01');\n    expect(response.body).to.have.property('message', 'user not found');\n    console.log(response.body);",
               "err": {},
-              "uuid": "d6804bba-e21e-4e56-9b81-9bbefe929c26",
-              "parentUUID": "754797c0-ab15-4386-a472-4bd52e9c2303",
+              "uuid": "37773da5-59d1-4f7f-8ff4-2d24bbbaced0",
+              "parentUUID": "d15f5484-fd72-417e-a2d9-3755344b0c84",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "914d3f87-da6a-4746-a6a5-63b2850f3095",
-            "d6804bba-e21e-4e56-9b81-9bbefe929c26"
+            "a402212a-a2d1-4e4e-aa7f-93470bcf7e08",
+            "37773da5-59d1-4f7f-8ff4-2d24bbbaced0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11,
+          "duration": 12,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
