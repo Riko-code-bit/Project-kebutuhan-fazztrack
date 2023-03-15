@@ -1,5 +1,6 @@
 Feature: Testing click and drag and drop Automation
 
+@interactionClick
   Scenario: Automation click on element 
 
     Given I am from on the front page
@@ -10,6 +11,7 @@ Feature: Testing click and drag and drop Automation
     When I m double clicking 
     Then I m got comment in third time 
 
+@interactionDragAndDrop
   Scenario: Automation drag and drop interaction
 
   Given I am back to homepage
