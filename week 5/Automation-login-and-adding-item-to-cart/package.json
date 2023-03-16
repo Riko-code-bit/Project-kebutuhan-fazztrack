@@ -2,6 +2,7 @@
   "name": "my-new-project",
   "type": "module",
   "devDependencies": {
+    "@wdio/allure-reporter": "^8.5.0",
     "@wdio/cli": "^8.5.1",
     "@wdio/cucumber-framework": "^8.4.0",
     "@wdio/dot-reporter": "^8.4.0",
@@ -11,6 +12,7 @@
     "wdio-chromedriver-service": "^8.1.1"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./wdio.conf.js",
+    "allure-report": "allure generate allure-results --clean && allure open"
   }
 }

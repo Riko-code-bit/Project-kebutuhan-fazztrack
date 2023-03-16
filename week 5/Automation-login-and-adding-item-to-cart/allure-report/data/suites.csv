@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Mar 16 17:23:09 ICT 2023","Thu Mar 16 17:23:20 ICT 2023","10944","","demoblaze login scenario","","","","Successfully login with correct credentials",""
