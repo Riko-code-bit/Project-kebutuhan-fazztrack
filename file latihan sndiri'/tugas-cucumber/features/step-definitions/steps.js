@@ -57,7 +57,7 @@ Given(/^I am back to homepage$/, async() => {
 // When di scenario pertama dipanggil kembali
 
 Then(/^I am scrolling down to interaction menu$/, async() => {
-    await browser.execute('window.scrollBy(0, 800)') // scroll to bottom
+    await browser.execute('window.scrollBy(0, 1000)') // scroll to bottom
     await browser.pause(1000)
     await ElementPage.klikInteractions()
     await browser.pause(2000)

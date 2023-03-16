@@ -1,4 +1,6 @@
 import Page from "./page.js"
+// const { browser } = require('webdriverio');
+
 
 class InteractionPage extends Page {
 
@@ -19,7 +21,7 @@ class InteractionPage extends Page {
 
     async dragAndDrop1() {
         const souceElements = $(`#draggable`)
-        // const target = $(`#simpleDropContainer > #droppable`)
+        // const target = $(`.ui-state-highlight`)
         await souceElements.dragAndDrop({x: 300, y: 50})
         await browser.pause(2000)
     }

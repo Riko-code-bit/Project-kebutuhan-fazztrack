@@ -18,6 +18,7 @@ Then(/^Im succesccfully login$/, async() => {
 
 When(/^Im log out$/, async() => {
     await FrontPage.logout()
+    await browser.pause(1000)
 })
 
 Then(/^I adding phone to my chart$/, async() => {
