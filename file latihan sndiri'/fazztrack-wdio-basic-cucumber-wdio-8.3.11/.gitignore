@@ -1,6 +1,0 @@
-node_modules
-allure-report
-allure-results
-reports/html/**
-reports/image/**
-reports/json/**
