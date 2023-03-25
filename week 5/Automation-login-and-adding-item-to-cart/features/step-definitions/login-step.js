@@ -25,9 +25,9 @@ When(/^Im log out and I adding phone to my chart$/, async() => {
 })
 
 Then(/^I am succesccfully added to my chart$/, async() => {
-    //assert item berhasil ditambahkan dihalaman cart
     await CartPage.verifyAddeditem()
     await browser.pause(1000)
+    //assert item berhasil ditambahkan dihalaman cart
 })
 
 

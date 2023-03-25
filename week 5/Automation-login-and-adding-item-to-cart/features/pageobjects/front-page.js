@@ -13,7 +13,7 @@ get inputPassword() {
 
 get buttonLogin() {
      return $(`[onclick='logIn()']`)
-    }
+}
 
 get linkTextLogin() {
     return $(`[data-target='#logInModal']`)
@@ -52,9 +52,7 @@ async login(username, password) {
     await this.isBtnLogginDisplayed()
     await this.inputUsername.setValue(username)
     await this.inputPassword.setValue(password)
-
     await this.buttonLogin.click()
-    
 }
 
 async logout() {
@@ -64,7 +62,7 @@ async logout() {
 async pencetBarang() {
     await this.linkBarang.click()
     await this.halamanBarang()
-   }
+}
 
 async halamanBarang() {
     await this.pencetChart.click()
@@ -78,8 +76,6 @@ async halamanUdhDichart() {
 
 open() {
     return super.open('index.html')
-}
-}
+}}
 
-// module exports
 export default new FrontPage()
