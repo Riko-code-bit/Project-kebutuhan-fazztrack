@@ -28,9 +28,6 @@ Then(/^I am succesccfully added to my chart$/, async() => {
     //assert item berhasil ditambahkan dihalaman cart
     await CartPage.verifyAddeditem()
     await browser.pause(1000)
-
-
-
 })
 
 

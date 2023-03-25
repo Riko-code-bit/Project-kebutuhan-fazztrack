@@ -8,14 +8,6 @@ class HomePage extends Page {
 
 async verifyLoginSuccess(user) {
     return await expect(await this.accountName).toHaveTextContaining(user)
-}
- 
-
-
-}
-
-
-
-
+}}
 // module.exports
 export default new HomePage() 

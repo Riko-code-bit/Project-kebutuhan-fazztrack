@@ -64,27 +64,17 @@ async logout() {
 async pencetBarang() {
     await this.linkBarang.click()
     await this.halamanBarang()
-   
-}
+   }
 
 async halamanBarang() {
-    // await this.linkBarang.waitForDisplayed(1000)
-    // await this.linkBarang.isDisplayed()
     await this.pencetChart.click()
     await this.buttonChart.click()
     await this.halamanUdhDichart()
 }
 
 async halamanUdhDichart() {
- await browser.pause(2000)
-    
-    
+ await browser.pause(2000)   
 }
-
-
-
-
-
 
 open() {
     return super.open('index.html')
