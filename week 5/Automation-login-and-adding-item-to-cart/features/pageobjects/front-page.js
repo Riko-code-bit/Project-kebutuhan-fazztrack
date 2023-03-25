@@ -1,81 +1,82 @@
-// const Page = require('./page')
-
 import Page from './page.js'
 
 class FrontPage extends Page {
 
-get inputUsername() { return $('#loginusername')
-}
+    get inputUsername() { 
+        return $('#loginusername')
+    }
 
-get inputPassword() { 
-    return $('#loginpassword')
-}
+    get inputPassword() { 
+        return $('#loginpassword')
+    }
 
-get buttonLogin() {
-     return $(`[onclick='logIn()']`)
-}
+    get buttonLogin() {
+        return $(`[onclick='logIn()']`)
+    }
 
-get linkTextLogin() {
-    return $(`[data-target='#logInModal']`)
-}
+    get linkTextLogin() {
+        return $(`[data-target='#logInModal']`)
+    }
 
-get buttonLogOut() {
-    return $(`[onclick='logOut()']`)
-}
+    get buttonLogOut() {
+        return $(`[onclick='logOut()']`)
+    }
 
-get linkBarang() {
-    return $(`#tbodyid > div:nth-of-type(1) .hrefch`)
-}
+    get linkBarang() {
+        return $(`#tbodyid > div:nth-of-type(1) .hrefch`)
+    }
 
-get pencetChart() {
-    return $(`.btn-success`)
-}
+    get pencetChart() {
+        return $(`.btn-success`)
+    }
 
-get buttonChart() {
-    return $(`#cartur`)
-}
+    get buttonChart() {
+        return $(`#cartur`)
+    }
 
-get showProduct() {
-    return $(`.col-lg-8 > h2`)
-}
+    get showProduct() {
+        return $(`.col-lg-8 > h2`)
+    }
 
-get home() {
-    return $(`.nav-link[href='index.html']`)
-}
-async isBtnLogginDisplayed() {
-    await (await this.buttonLogin).waitForDisplayed(2000)
-    return await this.buttonLogin.isDisplayed()
-}
+    get home() {
+        return $(`.nav-link[href='index.html']`)
+    }
 
-async login(username, password) {
-    await this.linkTextLogin.click()
-    await this.isBtnLogginDisplayed()
-    await this.inputUsername.setValue(username)
-    await this.inputPassword.setValue(password)
-    await this.buttonLogin.click()
-}
+    async isBtnLogginDisplayed() {
+        await (await this.buttonLogin).waitForDisplayed(2000)
+        return await this.buttonLogin.isDisplayed()
+    }
 
-async logout() {
-    await this.buttonLogOut.click()
-}
+    async login(username, password) {
+        await this.linkTextLogin.click()
+        await this.isBtnLogginDisplayed()
+        await this.inputUsername.setValue(username)
+        await this.inputPassword.setValue(password)
+        await this.buttonLogin.click()
+    }
 
-async pencetBarang() {
-    await this.linkBarang.click()
-    await this.halamanBarang()
-}
+    async logout() {
+        await this.buttonLogOut.click()
+    }
 
-async halamanBarang() {
-    await this.pencetChart.click()
-    await this.buttonChart.click()
-    await this.halamanUdhDichart()
-}
+    async pencetBarang() {
+        await this.linkBarang.click()
+        await this.halamanBarang()
+    }
 
-async halamanUdhDichart() {
- await browser.pause(2000)   
-}
+    async halamanBarang() {
+        await this.pencetChart.click()
+        await this.buttonChart.click()
+        await this.halamanUdhDichart()
+    }
 
-open() {
-    return super.open('index.html')
-}}
+    async halamanUdhDichart() {
+        await browser.pause(2000)   
+    }
+
+    open() {
+        return super.open('index.html')
+    }
+}
 
 export default new FrontPage()
